@@ -1,7 +1,8 @@
 # bubble_maps
 Inspired by @markmarkoh from his repository Datamaps at https://github.com/markmarkoh/datamaps.
 
-I have created the example for bublble map for three countries. India, USA and Canada as you can find in the repository by name [india.html](https://github.com/Anujarya300/bubble_maps/blob/master/india.html), [usa.html](https://github.com/Anujarya300/bubble_maps/blob/master/usa.html) and [canada.html](https://github.com/Anujarya300/bubble_maps/blob/master/canada.html) respectively.
+I have created the example for bublble map for three countries. India, USA and Canada as you can find in the repository
+[india.html](https://github.com/Anujarya300/bubble_maps/blob/master/india.html), [usa.html](https://github.com/Anujarya300/bubble_maps/blob/master/usa.html) and [canada.html](https://github.com/Anujarya300/bubble_maps/blob/master/canada.html) respectively.
 
 ### 1. Bubble map on India Geographical region
 
