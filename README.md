@@ -3,7 +3,7 @@ Inspired by @markmarkoh from his repository Datamaps at https://github.com/markm
 
 I have created the example for bublble map for three countries. India, USA and Canada as you can find in the repository by name [india.html](https://github.com/Anujarya300/bubble_maps/blob/master/india.html), [usa.html](https://github.com/Anujarya300/bubble_maps/blob/master/usa.html) and [canada.html](https://github.com/Anujarya300/bubble_maps/blob/master/canada.html) respectively.
 
-1. Bubble map on India Geographical region
+### 1. Bubble map on India Geographical region
 
 ![india bubble map](https://github.com/Anujarya300/bubble_maps/blob/master/images/india.jpg)
 
@@ -44,7 +44,7 @@ Please use **india.toto.json** for India geopraphy json data from https://github
 Please note in setProjection method, I have set [78.9629, 23.5937] to locate center point for India in the world map. That means
 Latitude = 78.9629 E and Longitude = 23.5937 N. Remember Latitute and Longitude are always East and North. For western countries, Latitude are in West so make it convert as Negative of East. e.g 102.3421 W ==> -102.3421 E.
 
-2. Bubble map on Canada Geographical region
+### 2. Bubble map on Canada Geographical region
 
 ![canada bubble map](https://github.com/Anujarya300/bubble_maps/blob/master/images/canada.jpg)
 
@@ -91,7 +91,7 @@ You can adjust this latitude and longitude co-ordinates by minor changing.
 e.g, if your map is not showing full view of North then you can change 68.1304 N to 70.3200 N or 71.3200 etc.
      if your map is not showing full view of East then you can change 32.1304 E to 70.3200 E or 30.3200 etc.
 
-3. Bubble map on USA Geographical region
+### 3. Bubble map on USA Geographical region
 
 ![usa bubble map](https://github.com/Anujarya300/bubble_maps/blob/master/images/usa.jpg)
 
