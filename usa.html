@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<body>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="/data/geography-data/datamaps.none.js"></script>
+    <div id="usa" style="height: 600px; width: 900px;"></div>
+    <script>
+        var bubble_map = new Datamap({
+            element: document.getElementById('usa'),
+            scope: 'usa',
+            geographyConfig: {
+                popupOnHover: true,
+                highlightOnHover: true,
+                borderColor: '#444',
+                borderWidth: 0.5,
+                dataUrl: './data/geography-data/usa.topo.json'
+                //dataJson: topoJsonData
+            },
+            fills: {
+                'MAJOR': '#306596',
+                'MEDIUM': '#0fa0fa',
+                'MINOR': '#bada55',
+                defaultFill: '#dddddd'
+            },
+            data: {
+                'NY': { fillKey: 'MINOR' },
+                'CA': { fillKey: 'MINOR' }
+            }
+        });
+
+        let bubbles = [
+            {
+                "centered":"NY",
+                "city": "New York",
+                "radius": 30,
+                "fillKey": "MEDIUM"
+            },
+            {
+                "centered":"AL",
+                "city": "Alabama",
+                "radius": 12,
+                "fillKey": "MINOR"
+            },
+            {
+                "centered":"AK",
+                "city": "Alaska",
+                "radius": 43,
+                "fillKey": "MEDIUM"
+            },
+            {
+                "centered":"AZ",
+                "city": "Arizona",
+                "radius": 22,
+                "fillKey": "MINOR"
+            },
+            {
+                "centered":"MD",
+                "city": "Maryland",
+                "radius": 56,
+                "fillKey": "MAJOR"
+            },
+            {
+                "centered":"OK",
+                "city": "Oklahoma",
+                "radius": 40,
+               "fillKey": "MEDIUM"
+            },
+            {
+                "centered":"PA",
+                "city": "Pennsylvania",
+                "radius": 25,
+               "fillKey": "MONOR"
+            },
+            {
+                "centered":"SC",
+                "city": "South Carolina",
+                "radius": 16,
+                "fillKey": "MINOR"
+            },
+            {
+                "centered":"TN",
+                "city": "Tennessee",
+                "radius": 64,
+                "fillKey": "MAJOR"
+            },
+            {
+                "centered":"UT",
+                "city": "Utah",
+                "radius": 33,
+                "fillKey": "MEDIUM"
+            },
+            {
+                "centered":"VT",
+                "city": "Vermont",
+                "radius": 42,
+                "fillKey": "MEDIUM"
+            },
+            {
+                "centered":"TX",
+                "city": "Texas",
+                "radius": 35,
+               "fillKey": "MEDIUM"
+            },
+            {
+                "centered":"WI",
+                "city": "Wisconsin",
+                "radius": 24,
+                "fillKey": "MINOR"
+            },
+            {
+                "centered":"WV",
+                "city": "West Virginia",
+                "radius": 45,
+                "fillKey": "MEDIUM"
+            },
+            {
+                "centered":"WA",
+                "city": "Washington",
+                "radius": 56,
+                "fillKey": "MAJOR"
+            }
+
+        ]
+        // // ISO ID code for city or <state></state>
+        setTimeout(() => { // only start drawing bubbles on the map when map has rendered completely.
+            bubble_map.bubbles(bubbles, {
+                popupTemplate: function (geo, data) {
+                    return `<div class="hoverinfo">city: ${data.city}, Slums: ${data.radius}%</div>`;
+                }
+            });
+        }, 1000);
+    </script>
+</body>
+
+</html>
