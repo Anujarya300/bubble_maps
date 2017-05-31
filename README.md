@@ -125,7 +125,7 @@ var bubble_map = new Datamap({
         
 You do not have to worry about USA map region since d3 already hadled it.
 
-## If you need to add some other countries map say country {xyz} which is not mentioned above, you need to do the folowing:
+## If you need to add some other countries map say country {xyz} other than India, Canada, USA. You need to do the folowing:
 1. Find the {xyz}.topo.json file for you country xyz. You can find from https://github.com/markmarkoh/datamaps/tree/master/dist.
 2. Extract Datamap.prototype.{xyz}Topo json and save it file named {xyz}.topo.json
 3. If the state codes contains dot(.) in the topo json, then you need to remove the dot from the code e.g, if your state code is CA.AL, remove CA. part to get 2-digit ISO code AL. If the states code are already in 2-digit ISO or do't have dot(.) then don't do any modification follow next steps.
