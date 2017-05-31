@@ -8,8 +8,6 @@ I have created the example for bublble map for three countries. India, USA and C
 
 ![india bubble map](https://github.com/Anujarya300/bubble_maps/blob/master/images/india.jpg)
 
-#### Set the correct projection for India map on world map with the help of Longitude and Latitute of India (you can google it India Longitude and Latitute)
-Please use **india.toto.json** for India geopraphy json data from https://github.com/Anujarya300/bubble_maps/blob/master/data/geography-data/india.topo.json, otherwise your map wont work. (I have truncated IND. from all state ISO code(2-digit ISO code), e.g IND.JH for Jharkhand state truncated to JH)  
 ```
  var bubble_map = new Datamap({
             element: document.getElementById('india'),
@@ -19,7 +17,7 @@ Please use **india.toto.json** for India geopraphy json data from https://github
                 highlightOnHover: true,
                 borderColor: '#444',
                 borderWidth: 0.5,
-                dataUrl: './data/geography-data/india.topo.json'
+                dataUrl: 'https://rawgit.com/Anujarya300/bubble_maps/master/data/geography-data/india.topo.json'
                 //dataJson: topoJsonData
             },
             fills: {
@@ -42,14 +40,15 @@ Please use **india.toto.json** for India geopraphy json data from https://github
 });
 ```
 
+###### Set the correct projection for India map on world map with the help of Longitude and Latitute of India (you can google it India Longitude and Latitute)
+Please use **india.toto.json** for India geopraphy json data from https://github.com/Anujarya300/bubble_maps/blob/master/data/geography-data/india.topo.json, otherwise your map wont work. (I have truncated IND. from all state ISO code(2-digit ISO code), e.g IND.JH for Jharkhand state truncated to JH)  
+
 Please note in setProjection method, I have set [78.9629, 23.5937] to locate center point for India in the world map. That means
 Latitude = 78.9629 E and Longitude = 23.5937 N. Remember Latitute and Longitude are always East and North. For western countries, Latitude are in West so make it convert as Negative of East. e.g 102.3421 W ==> -102.3421 E.
 
 ### 2. Bubble map on Canada Geographical region
 
 ![canada bubble map](https://github.com/Anujarya300/bubble_maps/blob/master/images/canada.jpg)
-
-Please use **canada.toto.json** for India geopraphy json data from https://github.com/Anujarya300/bubble_maps/blob/master/data/geography-data/canada.topo.json, otherwise your map wont work. (I have truncated CA. from all state ISO code(2-digit ISO code), e.g CA.TN to TN)
 
 ```
 var bubble_map = new Datamap({
@@ -60,7 +59,7 @@ var bubble_map = new Datamap({
                 highlightOnHover: true,
                 borderColor: '#444',
                 borderWidth: 0.5,
-                dataUrl: './data/geography-data/canada.topo.json'
+                dataUrl: 'https://rawgit.com/Anujarya300/bubble_maps/master/data/geography-data/canada.topo.json'
                 //dataJson: topoJsonData
             },
             fills: {
@@ -84,6 +83,10 @@ var bubble_map = new Datamap({
             }
         });
 ```
+
+###### Set the correct projection for Canada map on world map with the help of Longitude and Latitute of Canada (you can google it Canada Longitude and Latitute)
+
+Please use **canada.toto.json** for India geopraphy json data from https://github.com/Anujarya300/bubble_maps/blob/master/data/geography-data/canada.topo.json, otherwise your map wont work. (I have truncated CA. from all state ISO code(2-digit ISO code), e.g CA.TN to TN)
         
 Please note in setProjection method, I have set [-106.3468, 68.1304] to locate center point for Canada in the world map. That means
 Latitude = 106.3468 W and Longitude = 68.1304 N. Remember Latitute and Longitude are always East and North. For western countries, Latitude are in West so make it convert as Negative of East. e.g 102.3421 W ==> -102.3421 E.
@@ -96,8 +99,6 @@ e.g, if your map is not showing full view of North then you can change 68.1304 N
 
 ![usa bubble map](https://github.com/Anujarya300/bubble_maps/blob/master/images/usa.jpg)
 
-Here in the case of USA, you do not need to change the anything on usa.topo.json, since its cities are already in 2-digit ISO code.
-usa.totp.json: https://github.com/Anujarya300/bubble_maps/blob/master/data/geography-data/usa.topo.json
 ```
 var bubble_map = new Datamap({
             element: document.getElementById('usa'),
@@ -107,7 +108,7 @@ var bubble_map = new Datamap({
                 highlightOnHover: true,
                 borderColor: '#444',
                 borderWidth: 0.5,
-                dataUrl: './data/geography-data/usa.topo.json'
+                dataUrl: 'https://rawgit.com/Anujarya300/bubble_maps/master/data/geography-data/usa.topo.json'
                 //dataJson: topoJsonData
             },
             fills: {
@@ -122,7 +123,10 @@ var bubble_map = new Datamap({
             }
         });
 ```
-        
+      
+Here in the case of USA, you do not need to change the anything on usa.topo.json, since its cities are already in 2-digit ISO code.
+usa.totp.json: https://github.com/Anujarya300/bubble_maps/blob/master/data/geography-data/usa.topo.json
+  
 You do not have to worry about USA map region since d3 already hadled it.
 
 ## If you need to add some other countries map say country {xyz} other than India, Canada, USA. You need to do the folowing:
