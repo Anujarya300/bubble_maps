@@ -4,7 +4,7 @@
 <body>
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="http://d3js.org/topojson.v1.min.js"></script>
-    <script src="/data/geography-data/datamaps.none.js"></script>
+    <script src="https://rawgit.com/Anujarya300/bubble_maps/master/data/geography-data/datamaps.none.js"></script>
     <div id="usa" style="height: 600px; width: 900px;"></div>
     <script>
         var bubble_map = new Datamap({
@@ -15,7 +15,7 @@
                 highlightOnHover: true,
                 borderColor: '#444',
                 borderWidth: 0.5,
-                dataUrl: './data/geography-data/usa.topo.json'
+                dataUrl: 'https://rawgit.com/Anujarya300/bubble_maps/master/data/geography-data/usa.topo.json'
                 //dataJson: topoJsonData
             },
             fills: {
@@ -34,7 +34,7 @@
             {
                 "centered":"NY",
                 "city": "New York",
-                "radius": 30,
+                "radius": 25,
                 "fillKey": "MEDIUM"
             },
             {
@@ -46,7 +46,7 @@
             {
                 "centered":"AK",
                 "city": "Alaska",
-                "radius": 43,
+                "radius": 30,
                 "fillKey": "MEDIUM"
             },
             {
@@ -58,19 +58,19 @@
             {
                 "centered":"MD",
                 "city": "Maryland",
-                "radius": 56,
+                "radius": 39,
                 "fillKey": "MAJOR"
             },
             {
                 "centered":"OK",
                 "city": "Oklahoma",
-                "radius": 40,
+                "radius": 30,
                "fillKey": "MEDIUM"
             },
             {
                 "centered":"PA",
                 "city": "Pennsylvania",
-                "radius": 25,
+                "radius": 15,
                "fillKey": "MONOR"
             },
             {
@@ -82,7 +82,7 @@
             {
                 "centered":"TN",
                 "city": "Tennessee",
-                "radius": 64,
+                "radius": 44,
                 "fillKey": "MAJOR"
             },
             {
@@ -94,7 +94,7 @@
             {
                 "centered":"VT",
                 "city": "Vermont",
-                "radius": 42,
+                "radius": 32,
                 "fillKey": "MEDIUM"
             },
             {
@@ -106,7 +106,7 @@
             {
                 "centered":"WI",
                 "city": "Wisconsin",
-                "radius": 24,
+                "radius": 40,
                 "fillKey": "MINOR"
             },
             {
