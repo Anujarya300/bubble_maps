@@ -1,4 +1,4 @@
-# bubble_maps
+# bubble_maps (Create any country's map using custom maps)
 Inspired by @markmarkoh from his repository Datamaps at https://github.com/markmarkoh/datamaps.
 
 I have created the example for bublble map for three countries. India, USA and Canada as you can find in the repository
