@@ -38,6 +38,51 @@ I have created the example for bublble map for three countries. India, USA and C
                 return { path: path, projection: projection };
             }
 });
+
+// bubbles based on state or ISO code (i.e. bubbles on center of state)
+// use centered property
+let bubbles = [
+            {
+                centered: "MH",
+                fillKey: "MAJOR",
+                radius: 20,
+                state: "Maharastra"
+            },
+            {
+                centered: "UP",
+                fillKey: "MAJOR",
+                radius: 22,
+                state: "Uttar Pradesh"
+            }
+        ]
+
+// bubbles based on the co-ordinates of the state/city or any
+// use latitute and longitude properties
+// let bubbles = [
+        //     {
+        //         latitude: 19.7515,
+        //         longitude: 75.7139,
+        //         fillKey: "MAJOR",
+        //         radius: 20,
+        //         state: "Maharastra"
+        //     },
+        //     {
+        //         latitude: 25.7677,
+        //         longitude: 80.6627,
+        //         fillKey: "MAJOR",
+        //         radius: 22,
+        //         state: "Uttar Pradesh"
+        //     }
+        // ]
+
+        // // ISO ID code for city or <state></state>
+setTimeout(() => { // only start drawing bubbles on the map when map has rendered completely.
+    bubble_map.bubbles(bubbles, {
+        popupTemplate: function (geo, data) {
+            return `<div class="hoverinfo">city: ${data.state}, Slums: ${data.radius}%</div>`;
+        }
+    });
+}, 1000);
 ```
 
 ###### Set the correct projection for India map on world map with the help of Longitude and Latitute of India (you can google it India Longitude and Latitute)
