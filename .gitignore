@@ -1,0 +1,7 @@
+#logs
+*.logs
+/log
+#build
+_site
+#node_modules
+node_modules

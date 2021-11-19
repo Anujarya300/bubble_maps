@@ -15,7 +15,11 @@
                 highlightOnHover: true,
                 borderColor: '#444',
                 borderWidth: 0.5,
-                dataUrl: 'https://rawgit.com/Anujarya300/bubble_maps/master/data/geography-data/india.topo.json'
+                dataUrl: './data/geography-data/india.toto.json',
+                popupTemplate: function (geo, data) {
+                    
+                    return `<div class="hoverinfo">city: ${data.state}, Slums: ${data.percent}%</div>`;
+                }
                 //dataJson: topoJsonData
             },
             fills: {
@@ -25,70 +29,56 @@
                 defaultFill: '#dddddd'
             },
             data: {
-                'JH': { fillKey: 'MINOR' },
-                'MH': { fillKey: 'MINOR' }
+                'ML': {
+                    fillKey: 'MINOR',
+                    percent: 70,
+                    state: 'Meghalaya'
+                },
+                'MH': {
+                    fillKey: 'MEDIUM',
+                    percent: 70,
+                    state: 'Maharashtra'
+                },
+                'PB': {
+                    fillKey: 'MINOR',
+                    percent: 70,
+                    state: 'Punjab'
+                },
+                'SK': {
+                    fillKey: 'MINOR',
+                    percent: 70,
+                    state: 'Sikkim'
+                },
+                'PY': {
+                    fillKey: 'MEDIUM',
+                    percent: 70,
+                    state: 'Puducherry'
+                },
+                'UP': {
+                    fillKey: 'MAJOR',
+                    percent: 70,
+                    state: 'Uttar Pradesh'
+                }
             },
             setProjection: function (element) {
                 var projection = d3.geo.mercator()
                     .center([78.9629, 23.5937]) // always in [East Latitude, North Longitude]
-                    .scale(1000);
+                    .scale(700);
                 var path = d3.geo.path().projection(projection);
                 return { path: path, projection: projection };
             }
         });
 
         let bubbles = [
-            {
-                centered: "MH",
-                fillKey: "MAJOR",
-                radius: 20,
-                state: "Maharastra"
-            },
-            {
-                centered: "AP",
-                fillKey: "MAJOR",
-                radius: 22,
-                state: "Andhra Pradesh"
-            },
-            {
-                centered: "TN",
-                fillKey: "MAJOR",
-                radius: 16,
-                state: "Tamil Nadu"
-            },
-            {
-                centered: "WB",
-                fillKey: "MEDIUM",
-                radius: 15,
-                state: "West Bengal"
-            },
-            {
-                centered: "MP",
-                fillKey: "MEDIUM",
-                radius: 15,
-                state: "Madhya Pradesh"
-            },
-            {
-                centered: "UP",
-                fillKey: "MINOR",
-                radius: 8,
-                state: "Uttar Pradesh"
-            },
-            {
-                centered: "RJ",
-                fillKey: "MINOR",
-                radius: 7,
-                state: "Rajasthan"
-            }
-
         ]
         // // ISO ID code for city or <state></state>
         setTimeout(() => { // only start drawing bubbles on the map when map has rendered completely.
-            bubble_map.bubbles(bubbles, {
-                popupTemplate: function (geo, data) {
-                    return `<div class="hoverinfo">city: ${data.state}, Slums: ${data.radius}%</div>`;
-                }
-            });
+            // bubble_map.bubbles(bubbles, {
+            //     popupTemplate: function (geo, data) {
+            //         debugger;
+            //         return `<div class="hoverinfo">city: ${data.state}, Slums: ${data.radius}%</div>`;
+            //     }
+            // });
         }, 1000);
     </script>
 </body>
